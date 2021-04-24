@@ -103,7 +103,8 @@ public class Main {
 					}	
 					System.out.println(palabrasTexto[i] + " se repite "+ contadorRepetido + " veces.");
 					System.out.println("");
-					contadorRepetido=0;	
+					contadorRepetido=0;
+	
 
 					
 					
@@ -111,7 +112,7 @@ public class Main {
 				}
 			
 				
-				
+				contadorRepetido=1;
 				System.out.println("");
 				System.out.println("Palabras totales: "+contadorPalabras);*/
 				
