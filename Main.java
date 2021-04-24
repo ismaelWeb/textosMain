@@ -19,7 +19,7 @@ public class Main {
 		int contadorPalabras=0;
 		int contadorRepetido=0;	
 
-		String linea = " ";
+		String linea = "";
 		String lineaNueva="";
 		String textoEntero="";
 		try {
@@ -41,7 +41,8 @@ public class Main {
 						
 						if(partes[i].contains("1")||partes[i].contains("2")||partes[i].contains("3")||partes[i].contains("4")||partes[i].contains("5")||partes[i].contains("6")||partes[i].contains("7")||partes[i].contains("8")||partes[i].contains("9")||partes[i].contains("0")) {
 							partes[i]="";							
-						}						
+						}
+						partes[i]=partes[i].replaceAll(" ", "");
 					}
 					for (int i=0; i<partes.length; i++) {	
 						if(partes[i].endsWith(",")||partes[i].endsWith("-")||partes[i].endsWith(")")||partes[i].endsWith(".")||partes[i].endsWith("!")||partes[i].endsWith(";")||partes[i].endsWith(":")||partes[i].endsWith("?")) {
@@ -58,8 +59,16 @@ public class Main {
 							contadorPalabras--;
 
 						}
+						if(partes[i].contains(" ")) {							
+							partes[i]=partes[i].replaceAll(" ", "");
+						}
+						partes[i]=partes[i].replaceAll(" ", "");
+						/*lineaNueva=lineaNueva + " "+ partes[i];*/
 						
-						lineaNueva=lineaNueva + " "+ partes[i];
+						
+							
+						System.out.println(partes[i]);
+
 						
 						
 					}
@@ -67,10 +76,14 @@ public class Main {
 					textoEntero = textoEntero +" "+ lineaNueva;									
 					lineaNueva="";
 					linea = br.readLine();
+					
+					
 				}
 				
 				br.close();
-				System.out.println(textoEntero);
+				
+				
+				/*System.out.println(textoEntero);
 				textoEntero=textoEntero.replace("   ", " ");
 				textoEntero=textoEntero.replace("     ", " ");
 				textoEntero=textoEntero.toLowerCase();
@@ -85,6 +98,8 @@ public class Main {
 						contadorRepetido++; 
 						}
 						
+						
+						
 					}	
 					System.out.println(palabrasTexto[i] + " se repite "+ contadorRepetido + " veces.");
 					System.out.println("");
@@ -94,25 +109,11 @@ public class Main {
 					
 	
 				}
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+			
 				
 				
 				System.out.println("");
-				System.out.println("Palabras totales: "+contadorPalabras);
+				System.out.println("Palabras totales: "+contadorPalabras);*/
 				
 
 				
