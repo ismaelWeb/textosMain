@@ -27,6 +27,8 @@ public class Main {
 			try {
 				linea = br.readLine();
 				
+				System.out.println("hola esto es un commit");
+				
 				while (linea != null) {
 					String[] partes = linea.split(" ");
 					for (int i=0; i<partes.length; i++) {
@@ -35,7 +37,7 @@ public class Main {
 							partes[i]=partes[i].replace(String.valueOf(partes[i].charAt(partes[i].length()-1)), "");
 						}
 						
-						if(partes[i].startsWith(".")||partes[i].startsWith("\"")||partes[i].startsWith("¿")||partes[i].startsWith("(")||partes[i].startsWith("¡")||partes[i].startsWith("-")) {
+						if(partes[i].startsWith(".")||partes[i].startsWith("\"")||partes[i].startsWith("Â¿")||partes[i].startsWith("(")||partes[i].startsWith("Â¡")||partes[i].startsWith("-")) {
 							partes[i]=partes[i].replace(String.valueOf(partes[i].charAt(0)), "");							
 						}
 						
@@ -48,7 +50,7 @@ public class Main {
 						if(partes[i].endsWith(",")||partes[i].endsWith("-")||partes[i].endsWith(")")||partes[i].endsWith(".")||partes[i].endsWith("!")||partes[i].endsWith(";")||partes[i].endsWith(":")||partes[i].endsWith("?")) {
 							partes[i]=partes[i].replace(String.valueOf(partes[i].charAt(partes[i].length()-1)), "");
 						}
-						if(partes[i].startsWith("¿")||partes[i].startsWith("(")||partes[i].startsWith("¡")||partes[i].startsWith("-")) {
+						if(partes[i].startsWith("Â¿")||partes[i].startsWith("(")||partes[i].startsWith("Â¡")||partes[i].startsWith("-")) {
 							partes[i]=partes[i].replace(String.valueOf(partes[i].charAt(0)), "");
 						}						
 						if(!partes[i].isEmpty()) {
